@@ -1,0 +1,17 @@
+<html>
+<body>
+<p id="ad"></p>
+<script>
+function monitorBattery(battery) {
+  const ad = document.getElementById("ad");
+  if (battery.chargingTime == 0) {
+    ad.textContent = "good ad";
+  } else {
+    ad.textContent = "bad ad";
+  }
+}
+
+navigator.getBattery().then(monitorBattery);
+</script>
+</body>
+</html>
